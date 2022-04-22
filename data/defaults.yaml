@@ -236,6 +236,13 @@ prometheus::statsd_exporter::package_name: 'statsd_exporter'
 prometheus::statsd_exporter::service_name: 'statsd_exporter'
 prometheus::statsd_exporter::user: 'statsd-exporter'
 prometheus::statsd_exporter::version: '0.17.0'
+prometheus::systemd_exporter::download_extension: 'tar.gz'
+prometheus::systemd_exporter::download_url_base: 'https://github.com/povilasv/systemd_exporter/releases'
+prometheus::systemd_exporter::extra_groups: []
+prometheus::systemd_exporter::group: 'systemd-exporter'
+prometheus::systemd_exporter::package_name: 'systemd_exporter'
+prometheus::systemd_exporter::user: 'systemd-exporter'
+prometheus::systemd_exporter::version: '0.4.0'
 prometheus::storage_retention: '360h' # 15d; "d" suffix is only supported with prom >= 2.*
 prometheus::blackbox_exporter::user: 'blackbox-exporter'
 prometheus::blackbox_exporter::group: 'blackbox-exporter'
