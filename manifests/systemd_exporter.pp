@@ -48,13 +48,13 @@
 # @param version
 #  The binary release version
 class prometheus::systemd_exporter (
-  String $download_extension,
-  Prometheus::Uri $download_url_base ,
-  Array[String] $extra_groups,
-  String[1] $group,
-  String[1] $package_name,
-  String[1] $user,
-  String[1] $version,
+  String $download_extension              = 'tar.gz',
+  Prometheus::Uri $download_url_base      = 'https://github.com/povilasv/systemd_exporter/releases',
+  Array[String] $extra_groups             = [],
+  String[1] $group                        = 'systemd-exporter',
+  String[1] $package_name                 = 'systemd_exporter',
+  String[1] $user                         = 'systemd-exporter',
+  String[1] $version                      = '0.5.0',
   Boolean $purge_config_dir               = true,
   Boolean $restart_on_change              = true,
   Boolean $service_enable                 = true,
